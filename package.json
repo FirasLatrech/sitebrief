@@ -14,6 +14,14 @@
   ],
   "license": "MIT",
   "author": "Firas Latrach",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FirasLatrech/sitebrief.git"
+  },
+  "homepage": "https://github.com/FirasLatrech/sitebrief#readme",
+  "bugs": {
+    "url": "https://github.com/FirasLatrech/sitebrief/issues"
+  },
   "type": "module",
   "bin": {
     "sitebrief": "dist/server.js"
