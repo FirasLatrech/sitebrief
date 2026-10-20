@@ -41,7 +41,7 @@
     "test": "vitest run",
     "check": "biome check . && tsc -p tsconfig.test.json",
     "prepare": "tsc -p tsconfig.json",
-    "prepublishOnly": "pnpm check && pnpm test"
+    "prepublishOnly": "npm run check && npm test"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.32.1",
