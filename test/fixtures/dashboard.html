@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zebracorn Dashboard</title><link rel="stylesheet" href="styles.css">
+<style>.app { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; } aside { background: #ececec; padding: 24px; }
+aside a { display: block; padding: 8px 12px; border-radius: 6px; color: #1a2b3c; } aside a:hover { background: #c9c2b0; }
+main { padding: 32px; } table { width: 100%; border-collapse: collapse; } td, th { padding: 12px; border-bottom: 1px solid #c9c2b0; }
+[role=tablist] { display: flex; gap: 8px; margin-bottom: 16px; } [role=tab] { padding: 8px 16px; border: 1px solid #c9c2b0; background: none; border-radius: 6px; }
+@media (max-width: 768px) { .app { grid-template-columns: 1fr; } }</style></head>
+<body><div class="app">
+<aside><nav><a href="#">Overview</a><a href="#">Projects</a><a href="#">Team</a><a href="#">Settings</a></nav></aside>
+<main>
+  <h1>Moonlit overview</h1>
+  <div role="tablist"><button role="tab" aria-selected="true">Active</button><button role="tab" aria-selected="false">Archived</button></div>
+  <table><thead><tr><th>Name</th><th>Owner</th><th>Status</th></tr></thead><tbody>
+  <tr><td>Alpha</td><td>Kai</td><td>Live</td></tr><tr><td>Beta</td><td>Rin</td><td>Draft</td></tr><tr><td>Gamma</td><td>Ode</td><td>Live</td></tr>
+  </tbody></table>
+</main></div></body></html>

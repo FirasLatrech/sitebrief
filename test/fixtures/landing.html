@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zebracorn</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header>
+  <strong>Zebracorn</strong>
+  <button class="menu-toggle btn" aria-expanded="false" aria-controls="mainnav" aria-label="Menu">≡</button>
+  <nav id="mainnav"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="/dashboard.html">Dashboard</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <h1>Zebracorn Launchpad for Moonlit Teams</h1>
+    <p>Fixture copy that must never appear in a generated brief.</p>
+    <button class="btn" id="demo" aria-haspopup="dialog">Watch the demo</button>
+    <img class="hero-shot" src="/hero.jpg" alt="" width="1200" height="500">
+  </section>
+  <div class="logos"><img alt="" width="120" height="40" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%2240%22/%3E"><img alt="" width="120" height="40" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%2240%22/%3E"><img alt="" width="120" height="40" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%2240%22/%3E"><img alt="" width="120" height="40" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%2240%22/%3E"></div>
+  <section class="grid" id="features">
+    <article class="card"><h3>Glowing widgets</h3><p>Fixture body text one.</p></article>
+    <article class="card"><h3>Sparkly sync</h3><p>Fixture body text two.</p></article>
+    <article class="card"><h3>Velvet reports</h3><p>Fixture body text three.</p></article>
+  </section>
+  <section class="grid" id="pricing">
+    <div class="card plan"><h3>Pebble</h3><div class="price">$9/mo</div><p>For one person.</p><a class="btn" href="#">Choose</a></div>
+    <div class="card plan"><h3>Boulder</h3><div class="price">$29/mo</div><p>For teams.</p><a class="btn" href="#">Choose</a></div>
+    <div class="card plan"><h3>Mountain</h3><div class="price">$99/mo</div><p>For companies.</p><a class="btn" href="#">Choose</a></div>
+  </section>
+  <form class="signup"><label>Email <input type="email" name="email"></label><button type="submit" class="btn">Submit</button></form>
+</main>
+<dialog id="demo-dialog" aria-label="Demo"><p>Demo video placeholder</p><button class="btn" id="close">Close</button></dialog>
+<footer><svg class="lucide lucide-radio" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2"/></svg><a href="#">Terms</a><a href="#">Privacy</a><span class="ok">All systems normal</span><span class="error">Status</span></footer>
+<script>
+  const t = document.querySelector(".menu-toggle"), n = document.getElementById("mainnav");
+  t.addEventListener("click", () => { const o = n.classList.toggle("open"); t.setAttribute("aria-expanded", String(o)); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") { n.classList.remove("open"); t.setAttribute("aria-expanded", "false"); } });
+  const d = document.getElementById("demo-dialog");
+  document.getElementById("demo").addEventListener("click", () => d.showModal());
+  document.getElementById("close").addEventListener("click", () => d.close());
+  fetch("/api/plans/42").catch(() => {});
+</script>
+</body></html>

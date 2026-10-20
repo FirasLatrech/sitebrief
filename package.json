@@ -1,0 +1,52 @@
+{
+  "name": "sitebrief",
+  "version": "1.0.0",
+  "description": "MCP server that studies a website's structure and look and drives a coding agent to rebuild it as an original product: build brief, section images, image slots and a visual compare loop.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "playwright",
+    "website",
+    "design-tokens",
+    "claude",
+    "agent",
+    "brief"
+  ],
+  "license": "MIT",
+  "author": "Firas Latrach",
+  "type": "module",
+  "bin": {
+    "sitebrief": "dist/server.js"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.map",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "check": "biome check . && tsc -p tsconfig.test.json",
+    "prepare": "tsc -p tsconfig.json",
+    "prepublishOnly": "pnpm check && pnpm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "pixelmatch": "8.0.0",
+    "playwright": "1.64.1",
+    "pngjs": "7.0.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@types/node": "22.20.5",
+    "@types/pngjs": "6.0.5",
+    "typescript": "6.0.2",
+    "vitest": "5.0.5"
+  }
+}
